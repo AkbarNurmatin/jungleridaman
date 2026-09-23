@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WWW.Jungler Idaman</title>
+    <style>
+        body {
+            background-color: #0c2f47;
+            color: white;
+        }
+        
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        
+        p {
+            text-align: center;
+        }
+        
+        img {
+            display: block;
+            width: 120px;
+            margin: 20px auto;
+        }
+        
+        .ig-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: white;
+            color: #0c2f47;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        
+        .ig-button:hover {
+            background-color: #d9d9d9;
+            transform: scale(1.05);
+        }
+        
+        .start-button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #c62828;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        
+        .start-button:hover {
+            background-color: #a51f1f;
+            transform: scale(1.05);
+        }
+        
+        #tutor {
+            margin-top: 50px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .tutor-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .tutor-card {
+            background-color: white;
+            color: #0c2f47;
+            width: 220px;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        
+        .tutor-card:hover {
+            transform: translateY(-8px);
+        }
+        
+        .tutor-card h3 {
+            margin-top: 0;
+        }
+        
+        .tutor-card p {
+            line-height: 1.5;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #tutorial-content {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+    
+<body>
+    <h1>Tutor Jungler? Ini solusinya</h1>
+    
+    <img src="https://i.ibb.co/CKPvYbbQ/Chat-GPT-Image-19-Sep-2026-00-37-46-1.png" alt='Retribution'>
+        
+    <p>Halo selamat datang di Jungler Idaman</p>
+    
+    <p>Langsung aja follow Ig: Jungler.idamanku</p>
+    
+    <a href="https://www.instagram.com/christian.hsb/" class="ig-button">
+        Follow Instagram
+    </a>
+    
+    <a href="#" class="start-button" onclick="startTutor(event)">
+        Mulai Tutor
+    </a>
+    
+    <div id="tutor" class="hidden">
+        <h2>Basic Jungler</h2>
+        <p>Pelajari cara menjadi jungler yang lebih baik.</p>
+        
+        <div class="tutor-container">
+            <div class="tutor-card" onclick="showFarming()">
+                <h3>🌳 Farming</h3>
+                <p>Pelajari cara farming dengan cepat dan efisien agar level dan gold lu lebih unggul.</p>
+            </div>
+            
+            <div class="tutor-card" onclick="showRetribution()">
+                <h3>⚔️ Retribution</h3>
+                <p>Pelajari timing Retribution supaya objektif seperti Turtle dan Lord nggak gampang dicuri.</p>
+            </div>
+            
+            <div class="tutor-card" onclick="showGanking()">
+                <h3>🎯 Ganking</h3>
+                <p>Pelajari kapan harus melakukan ganking dan membantu lane yang membutuhkan.</p>
+            </div>
+        </div> 
+        
+        <div id="tutorial-content" class="hidden"></div>
+    </div>
+
+    <script>
+        function showFarming() {
+            const content = document.getElementById("tutorial-content");
+            content.classList.remove("hidden");
+            content.innerHTML = `
+            <h2>🌳 Farming Guide</h2>
+            <p>Fokus farming untuk mendapatkan gold dan level lebih cepat.</p>
+            <p>Prioritaskan jungle camp dan jangan terlalu lama meninggalkan area jungle.</p>
+            `;
+        }
+        
+        function showRetribution() {
+            const content = document.getElementById("tutorial-content");
+            content.classList.remove("hidden");
+            content.innerHTML = `
+            <h2>⚔️ Retribution</h2>
+            <p>Gunakan Retribution pada timing yang tepat untuk mengamankan objektif.</p>
+            <p>Pastikan lu memperhatikan HP Turtle atau Lord sebelum menggunakan Retribution.</p>
+            `;
+        }
+        
+        function showGanking() {
+            const content = document.getElementById("tutorial-content");
+            content.classList.remove("hidden");
+            content.innerHTML = `
+            <h2>🎯 Ganking</h2>
+            <p>Jangan asal melakukan ganking. Perhatikan posisi musuh dan kondisi lane terlebih dahulu.</p>
+            <p>Pilih lane yang memiliki peluang tinggi untuk mendapatkan kill atau membantu teman memenangkan lane.</p>
+            <p>Setelah berhasil melakukan ganking, manfaatkan momentum untuk mengambil objektif atau kembali farming.</p>
+            `;
+        }
+        
+        function startTutor(e) {
+            e.preventDefault();
+            const tutor = document.getElementById("tutor");
+            
+            tutor.classList.remove("hidden");
+            
+            tutor.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    </script>    
+</body>
+</html>
